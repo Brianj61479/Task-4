@@ -128,7 +128,7 @@ function App() {
     const moviesAscend = [...movies];
 
     moviesAscend.sort(
-      (firstMovie, secondMovie) => firstMovie.length - secondMovie.length
+      (movie, secondMovie) => movie.length - secondMovie.length
     );
 
     setMovies(moviesAscend);
@@ -138,7 +138,7 @@ function App() {
     const moviesDescend = [...movies];
 
     moviesDescend.sort(
-      (firstMovie, secondMovie) => secondMovie.length - firstMovie.length
+      (movie, secondMovie) => secondMovie.length - movie.length
     );
 
     setMovies(moviesDescend);
