@@ -4,7 +4,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Movies from "./components/Movies";
 import SearchBar from "./components/SearchBar";
-// import { movies } from "./utils/movies";
 
 function App() {
   const moviesData = [
@@ -132,10 +131,6 @@ function App() {
       (firstMovie, secondMovie) => firstMovie.length - secondMovie.length
     );
 
-    moviesAscend.forEach((e) => {
-      console.log(`${e.title} ${e.length}`);
-    });
-
     setMovies(moviesAscend);
   };
 
@@ -146,25 +141,22 @@ function App() {
       (firstMovie, secondMovie) => secondMovie.length - firstMovie.length
     );
 
-    moviesDescend.forEach((e) => {
-      console.log(`${e.title} ${e.length}`);
-    });
-
     setMovies(moviesDescend);
   };
 
   return (
     <>
-      {/* Header Bar for Searching */}
       <SearchBar
+        className='Search Bar'
+        type='text'
         search={search}
         setSearch={setSearch}
         maxLength={maxLength}
         setMaxLength={setMaxLength}
-        Ascend={ascendingOrder}
-        Descend={descendingOrder}
+        ascendingOrder={ascendingOrder}
+        descendingOrder={descendingOrder}
       />
-      {/* Output the Movies */}
+
       <Movies movies={movies} />
     </>
   );

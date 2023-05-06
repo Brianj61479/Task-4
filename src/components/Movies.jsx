@@ -105,7 +105,7 @@ const Movies = ({ movies }) => {
     <table>
       <thead>
         <tr>
-          <th>Title (year)</th>
+          <th>Title ( Year )</th>
           <th>Director(s)</th>
           <th>Length</th>
           <th>Country</th>
@@ -114,7 +114,7 @@ const Movies = ({ movies }) => {
       <tbody>
         {movies.map(({ title, year, director, length, country }) => {
           return (
-            <tr key={`${title}${year}`}>
+            <tr key={`${title}`}>
               <td>
                 {title} ({year})
               </td>
